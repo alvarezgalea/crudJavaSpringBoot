@@ -41,7 +41,7 @@ public class BooksController {
         return books.getBookid();
     }
     
-    @PutMapping("/books")
+    @PutMapping("/books/{bookid}")
     private Books update (@RequestBody Books books){
         booksService.saveOrUpdate(books);
         return books;
